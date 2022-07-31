@@ -21,47 +21,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/downButton"
+        android:id="@+id/frontButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#FFFFFF"
-        android:text="⬇︎"
+        android:text="⬆︎"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/beepButton"
-        app:strokeColor="#000000"
-        app:strokeWidth="2dp" />
-
-    <Button
-        android:id="@+id/beepButton"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="5dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="🔔"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frontButton"
-        app:strokeColor="#FF7F00"
-        app:strokeWidth="3dp" />
-
-    <Button
-        android:id="@+id/rightButton"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="85dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="➡︎"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/beepButton"
-        app:layout_constraintTop_toTopOf="@+id/frontButton"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
         app:strokeColor="#000000"
         app:strokeWidth="2dp" />
 
@@ -70,7 +40,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="84dp"
         android:backgroundTint="#FFFFFF"
         android:text="⬅︎"
         android:textColor="#000000"
@@ -82,25 +52,56 @@
         app:strokeWidth="2dp" />
 
     <Button
-        android:id="@+id/frontButton"
+        android:id="@+id/backButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginTop="4dp"
         android:backgroundTint="#FFFFFF"
-        android:text="⬆︎"
+        android:text="⬇︎"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/beepButton"
         app:strokeColor="#000000"
         app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="84dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="➡︎"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/beepButton"
+        app:layout_constraintTop_toTopOf="@+id/frontButton"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/beepButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="🔔"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frontButton"
+        app:strokeColor="#FF7F00"
+        app:strokeWidth="3dp" />
 
     <RadioGroup
 
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="28dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +116,7 @@
             android:text="auto" />
 
         <RadioButton
-            android:id="@+id/manual"
+            android:id="@+id/manualButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
@@ -126,15 +127,15 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
-        android:text="status: "
+        android:text="status: manual driving mode 🚘"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/downButton" />
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
