@@ -17,35 +17,21 @@ class MainActivity : AppCompatActivity() {
                 R.id.autoButton -> {
                     // autonomous driving mode
                     status.text = "status: autonomous driving mode \uD83D\uDE98"
-
-
-                    frontButton.setEnabled(false)
-                    backButton.setEnabled(false)
-                    leftButton.setEnabled(false)
-                    rightButton.setEnabled(false)
-                    beepButton.setEnabled(false)
-
-                    frontButton.setBackgroundColor(Color.parseColor("#808080"))
-                    backButton.setBackgroundColor(Color.parseColor("#808080"))
-                    leftButton.setBackgroundColor(Color.parseColor("#808080"))
-                    rightButton.setBackgroundColor(Color.parseColor("#808080"))
-                    beepButton.setBackgroundColor(Color.parseColor("#808080"))
-
+                    frontButton.setVisibility(View.INVISIBLE)
+                    backButton.setVisibility(View.INVISIBLE)
+                    leftButton.setVisibility(View.INVISIBLE)
+                    rightButton.setVisibility(View.INVISIBLE)
+                    beepButton.setVisibility(View.INVISIBLE)
                 }
                 R.id.manualButton -> {
                     // manual driving mode
                     status.text = "status: manual driving mode \uD83D\uDE98"
-                    frontButton.setEnabled(true)
-                    backButton.setEnabled(true)
-                    leftButton.setEnabled(true)
-                    rightButton.setEnabled(true)
-                    beepButton.setEnabled(true)
+                    frontButton.setVisibility(View.VISIBLE)
+                    backButton.setVisibility(View.VISIBLE)
+                    leftButton.setVisibility(View.VISIBLE)
+                    rightButton.setVisibility(View.VISIBLE)
+                    beepButton.setVisibility(View.VISIBLE)
 
-                    frontButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
-                    backButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
-                    leftButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
-                    rightButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
-                    beepButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
                 }
             }
 
@@ -119,26 +105,36 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun goInitial(): Unit {
+        frontButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
+        backButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
+        leftButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
+        rightButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
+        beepButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
         status.text = "status: manual driving mode \uD83D\uDE98"
     }
 
     fun goFront(): Unit {
+        frontButton.setBackgroundColor(Color.parseColor("#E9ECEF"))
         status.text = "status: Karut Car is moving forward."
     }
 
     fun goBack(): Unit {
+        backButton.setBackgroundColor(Color.parseColor("#E9ECEF"))
         status.text = "status: Karut Car is backing up."
     }
 
     fun goLeft(): Unit {
+        leftButton.setBackgroundColor(Color.parseColor("#E9ECEF"))
         status.text = "status: Karut Car is turning left."
     }
 
     fun goRight(): Unit {
+        rightButton.setBackgroundColor(Color.parseColor("#E9ECEF"))
         status.text = "status: Karut Car is turning right."
     }
 
     fun beep(): Unit {
+        beepButton.setBackgroundColor(Color.parseColor("#E9ECEF"))
         status.text = "status: Karut Car is honking! \uD83D\uDD14"
     }
 }
