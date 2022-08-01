@@ -1,5 +1,6 @@
 package com.techtown.karutcar
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
@@ -16,11 +17,20 @@ class MainActivity : AppCompatActivity() {
                 R.id.autoButton -> {
                     // autonomous driving mode
                     status.text = "status: autonomous driving mode \uD83D\uDE98"
+
+
                     frontButton.setEnabled(false)
                     backButton.setEnabled(false)
                     leftButton.setEnabled(false)
                     rightButton.setEnabled(false)
                     beepButton.setEnabled(false)
+
+                    frontButton.setBackgroundColor(Color.parseColor("#808080"))
+                    backButton.setBackgroundColor(Color.parseColor("#808080"))
+                    leftButton.setBackgroundColor(Color.parseColor("#808080"))
+                    rightButton.setBackgroundColor(Color.parseColor("#808080"))
+                    beepButton.setBackgroundColor(Color.parseColor("#808080"))
+
                 }
                 R.id.manualButton -> {
                     // manual driving mode
@@ -30,6 +40,12 @@ class MainActivity : AppCompatActivity() {
                     leftButton.setEnabled(true)
                     rightButton.setEnabled(true)
                     beepButton.setEnabled(true)
+
+                    frontButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
+                    backButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
+                    leftButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
+                    rightButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
+                    beepButton.setBackgroundColor(Color.parseColor("#FFFFFF"))
                 }
             }
 
@@ -103,7 +119,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun goInitial(): Unit {
-        status.text = "status: "
+        status.text = "status: manual driving mode \uD83D\uDE98"
     }
 
     fun goFront(): Unit {
